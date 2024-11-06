@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Top_Level_Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Electrical_Relay</Name>
+  <Identifier>28b0bd60-57bc-4141-b20c-69cef2af6b44</Identifier>
+  <Description>Gathers software elements allowing to manage electrical relays.</Description>
+  <Packages />
+  <Types>
+    <Enumerated_Type>
+      <Name>E_Relay_Configuration</Name>
+      <Identifier>c23d3824-1574-4c0c-8d9b-54426fae0524</Identifier>
+      <Description>Allows to define a data that represents a relay kind.</Description>
+      <Enumerals>
+        <Enumeral>
+          <Name>MONOSTABLE_RELAY_NORMALLY_CLOSED</Name>
+          <Identifier>a814c4fc-5952-4b6d-9817-83f2f67ed0d4</Identifier>
+          <Description />
+        </Enumeral>
+        <Enumeral>
+          <Name>MONOSTABLE_RELAY_NORMALLY_OPEN</Name>
+          <Identifier>9cba0fbf-ab84-4496-9c4e-e7422cbe5343</Identifier>
+          <Description />
+        </Enumeral>
+      </Enumerals>
+    </Enumerated_Type>
+  </Types>
+  <Interfaces>
+    <Client_Server_Interface>
+      <Name>Relay_Actuation_Requests</Name>
+      <Identifier>b3732991-fbdc-4798-94bc-e05a951b4860</Identifier>
+      <Description>Gathers operations allowing to manage a relay.</Description>
+      <Operations>
+        <Client_Server_Operation>
+          <Name>Close_Circuit</Name>
+          <Identifier>3e0bd2c3-9e41-4b8c-92c8-578d8de605cd</Identifier>
+          <Description>Close the circuit controlled by the relay.</Description>
+          <Parameters />
+        </Client_Server_Operation>
+        <Client_Server_Operation>
+          <Name>Open_Circuit</Name>
+          <Identifier>67f4a88d-2796-4fce-bf0a-597c3eb69533</Identifier>
+          <Description>Open the circuit controlled by the relay.</Description>
+          <Parameters />
+        </Client_Server_Operation>
+      </Operations>
+    </Client_Server_Interface>
+  </Interfaces>
+  <Component_Types>
+    <Component_Type>
+      <Name>Relay_Actuator</Name>
+      <Identifier>89a8d3a4-38c2-479e-ba35-8eb6019a80ea</Identifier>
+      <Description>Allows to pilot a relay hardware device.</Description>
+      <Configurations>
+        <Configuration_Parameter>
+          <Name>Relay_Configuration</Name>
+          <Identifier>6cafb7f2-e9a8-4c53-9353-4a9eb60adef7</Identifier>
+          <Description>Allows to set the configuration of the relay.</Description>
+          <Referenced_Type_Id>c23d3824-1574-4c0c-8d9b-54426fae0524</Referenced_Type_Id>
+        </Configuration_Parameter>
+      </Configurations>
+      <Operations />
+      <Provider_Ports>
+        <Provider_Port>
+          <Name>Command</Name>
+          <Identifier>67691c85-e4d3-4eca-8277-63b11eb3dfcf</Identifier>
+          <Description />
+          <Referenced_Interface_Id>b3732991-fbdc-4798-94bc-e05a951b4860</Referenced_Interface_Id>
+        </Provider_Port>
+      </Provider_Ports>
+      <Requirer_Ports>
+        <Requirer_Port>
+          <Name>Pin</Name>
+          <Identifier>c2555359-bdca-4c25-bbfe-6937944101dc</Identifier>
+          <Description />
+          <Referenced_Interface_Id>a330e264-839e-477e-840a-14fe8bf973d1</Referenced_Interface_Id>
+        </Requirer_Port>
+      </Requirer_Ports>
+    </Component_Type>
+  </Component_Types>
+  <Compositions />
+</Top_Level_Package>

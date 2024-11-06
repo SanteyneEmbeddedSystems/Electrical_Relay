@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Software_Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Electrical_Relay</Name>
+  <Identifier>5072ce93-449e-4911-a50f-c20af6e162ba</Identifier>
+  <Description />
+  <Packages_References>
+    <Package_Reference>
+      <Last_Known_Name>Electrical_Relay</Last_Known_Name>
+      <Relative_Path>Electrical_Relay.pkgx</Relative_Path>
+      <Is_Writable>true</Is_Writable>
+    </Package_Reference>
+    <Package_Reference>
+      <Last_Known_Name>Hardware_IO_Interfaces</Last_Known_Name>
+      <Relative_Path>..\..\Hardware_IO_Interfaces\mdl\Hardware_IO_Interfaces.pkgx</Relative_Path>
+      <Is_Writable>false</Is_Writable>
+    </Package_Reference>
+  </Packages_References>
+</Software_Project>
